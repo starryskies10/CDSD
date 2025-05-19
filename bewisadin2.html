@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casa De Saber Digital</title>
+  <style>
+    body {
+      font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+      color: #5E5E5E;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #ffffff; /* Background putih */
+    }
+
+    #container {
+      max-width: 1200px;
+      margin: 20px auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.3);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      background: linear-gradient(to right, #FF9AA2, #FFB7B2);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 5px dotted #FFDAC1;
+    }
+
+    .header img {
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #FFDAC1;
+    }
+
+    .header h1 {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .main {
+      display: flex;
+      flex: 1;
+    }
+
+    .left, .right {
+      width: 25%;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.7);
+    }
+
+    .middle {
+      width: 50%;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.9);
+      border-left: 2px dashed #FFDAC1;
+      border-right: 2px dashed #FFDAC1;
+    }
+
+    h3 {
+      color: #FF9AA2;
+      border-bottom: 2px dotted #FFB7B2;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    li::before {
+      content: "📚";
+      position: absolute;
+      left: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #5E5E5E;
+      background: linear-gradient(to right, #E2F0CB, #B5EAD7);
+      padding: 8px 15px 8px 35px;
+      border-radius: 20px;
+      display: block;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      position: relative;
+    }
+
+    a::before {
+      content: "✨";
+      position: absolute;
+      left: 10px;
+    }
+
+    a:hover {
+      background: linear-gradient(to right, #FF9AA2, #FFB7B2);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    .middle h2 {
+      color: #FF9AA2;
+      text-align: center;
+    }
+
+    .middle img {
+      border-radius: 10px;
+      border: 5px solid #FFDAC1;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background-color: #FFF9F9;
+      padding: 10px;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+
+    .middle img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      background: linear-gradient(to right, #B5EAD7, #E2F0CB);
+      padding: 15px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #5E5E5E;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .left, .middle, .right {
+        width: 100%;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="header">
+      <img src="https://imgur.com/SwZaD1g.jpg" width="100" height="100" alt="Library Mascot" />
+      <h1>Casa De Saber Digital</h1>
+    </div>
+
+    <div class="main">
+      <div class="left">
+        <h3>MENU</h3>
+        <ul>
+          <li><a href="bewisadin5.html">Profile</a>
+        </ul>
+      </div>
+
+      <div class="middle">
+        <h3>BUKU TERPOPULER</h3>
+        <h2>BULAN - TERE LIYE</h2>
+        <img src="https://i.imgur.com/CZNf4EH.jpg" width="240" alt="Cover Buku" />
+      </div>
+
+      <div class="right">
+        <h3>KOLEKSI</h3>
+        <ul>
+          <li><a href="bewisadin3.html">Buku pilihan</a>
+          <li><a href="bewisadin4.html">Jurnal yang dilanggan</a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Casa De Saber Digital © 2025</p>
+    </div>
+  </div>
+</body>
+</html>
