@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Profile Perpustakaan Online</title>
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+            color: #5E5E5E;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #ffffff; /* Background putih */
+        }
+        
+        #container {
+            max-width: 1200px;
+            margin: 20px auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(to right, #FF9AA2, #FFB7B2);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 5px dotted #FFDAC1;
+        }
+        
+        .header img {
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #FFDAC1;
+        }
+
+        .header h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+            font-size: 2rem;
+        }  
+        
+        .main {
+            display: flex;
+            padding: 0;
+        }
+
+        .left, .right {
+            width: 5%;
+            min-width: 20px;
+        }
+        
+        .middle {
+            flex: 1;
+            padding: 20px;
+            background-color: rgba(255,255,255,0.9);
+        }
+
+        .profiles-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .profile-card {
+            background: rgba(255, 218, 193, 0.3);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #FFB7B2;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .profile-name {
+            font-size: 1.2rem;
+            color: #FF9AA2;
+            margin: 10px 0;
+        }
+
+        .profile-details {
+            text-align: left;
+            padding: 0 5px;
+            flex-grow: 1;
+        }
+
+        .profile-detail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 8px 0;
+            border-bottom: 1px dashed #FFDAC1;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: #FF9AA2;
+            width: 60px;
+            font-size: 0.9rem;
+        }
+
+        .detail-value {
+            color: #5E5E5E;
+            flex-grow: 1;
+            text-align: right;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+        
+        .footer {
+            background: linear-gradient(to right, #B5EAD7, #E2F0CB);
+            padding: 15px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #5E5E5E;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .profiles-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .profile-card {
+                min-height: 320px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profiles-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-detail {
+                flex-direction: column;
+            }
+            
+            .detail-value {
+                text-align: left;
+                width: 100%;
+                margin-top: 5px;
+            }
+
+            .left, .right {
+                display: none;
+            }
+            
+            .profile-card {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div class="header">
+        <img src="https://imgur.com/SwZaD1g.jpg" width="100" height="100" alt="Library Logo">
+        <h1>Casa De Saber Digital</h1>
+    </div>
+
+    <div class="main">
+        <div class="left"></div>
+        
+        <div class="middle">
+            <div class="profiles-container">
+                <div class="profile-card">
+                    <img src="https://imgur.com/rjb11ZE.jpg" alt="Profile 1" class="profile-picture">
+                    <h2 class="profile-name">Nabella Khanza</h2>
+                    <div class="profile-details">
+                        <div class="profile-detail">
+                            <span class="detail-label">NIM:</span>
+                            <span class="detail-value">13040124140137</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Prodi:</span>
+                            <span class="detail-value">Ilmu Perpustakaan dan Informasi</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Angkatan:</span>
+                            <span class="detail-value">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="https://imgur.com/Rkw7wel.jpg" alt="Profile 2" class="profile-picture">
+                    <h2 class="profile-name">Wilda Husna Maulida</h2>
+                    <div class="profile-details">
+                        <div class="profile-detail">
+                            <span class="detail-label">NIM:</span>
+                            <span class="detail-value">13040124140138</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Prodi:</span>
+                            <span class="detail-value">Ilmu Perpustakaan dan Informasi</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Angkatan:</span>
+                            <span class="detail-value">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="https://imgur.com/mfCuZ5K.jpg" alt="Profile 3" class="profile-picture">
+                    <h2 class="profile-name">Elsa Nugroho</h2>
+                    <div class="profile-details">
+                        <div class="profile-detail">
+                            <span class="detail-label">NIM:</span>
+                            <span class="detail-value">13040124140156</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Prodi:</span>
+                            <span class="detail-value">Ilmu Perpustakaan dan Informasi</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Angkatan:</span>
+                            <span class="detail-value">2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="https://imgur.com/6xPCBUe.jpg" alt="Profile 4" class="profile-picture">
+                    <h2 class="profile-name">Dyna Hawa Oktavia</h2>
+                    <div class="profile-details">
+                        <div class="profile-detail">
+                            <span class="detail-label">NIM:</span>
+                            <span class="detail-value">13040124140166</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Prodi:</span>
+                            <span class="detail-value">Ilmu Perpustakaan dan Informasi</span>
+                        </div>
+                        <div class="profile-detail">
+                            <span class="detail-label">Angkatan:</span>
+                            <span class="detail-value">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right"></div>
+    </div>
+
+    <div class="footer">
+        <p>Casa De Saber Digital © 2023</p>
+    </div>
+</div>
+</body>
+</html>

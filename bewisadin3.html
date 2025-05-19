@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil Perpustakaan Online</title>
+  <style>
+    body {
+      font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+      color: #5E5E5E;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    #container {
+      max-width: 1200px;
+      margin: 20px auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .header {
+      background: linear-gradient(to right, #FF9AA2, #FFB7B2);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 5px dotted #FFDAC1;
+    }
+
+    .header img {
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #FFDAC1;
+    }
+
+    .header h1 {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .menu {
+      background-color: rgba(255, 245, 225, 0.7); /* cream */
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #86592d;
+      padding: 12px 30px;
+      margin: 0 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: transform 0.2s ease, background-color 0.3s;
+      background-color: rgba(255, 255, 255, 0.6);
+      display: inline-block;
+    }
+
+    .menu a:hover {
+      background-color: #fff1cc;
+      transform: scale(1.05);
+    }
+
+    .menu a:active {
+      transform: scale(1);
+    }
+
+    .middle2 {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .middle2 h2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #FF9AA2;
+    }
+
+    .buku {
+      flex: 1 1 calc(25% - 20px);
+      max-width: calc(25% - 20px);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 992px) {
+      .buku {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .buku {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .buku {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    .foto {
+      text-align: center;
+    }
+
+    .foto img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    .judul {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .penulis {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .footer {
+      background: linear-gradient(to right, #B5EAD7, #E2F0CB);
+      padding: 15px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #5E5E5E;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="header">
+      <img src="https://imgur.com/SwZaD1g.jpg" width="100" height="100" alt="Library Logo" />
+      <h1>Casa De Saber Digital</h1>
+    </div>
+
+    <div class="menu">
+      <a href="bewisadin2.html">Home</a>
+      <a href="bewisadin3.html">Buku</a>
+      <a href="bewisadin4.html">Jurnal</a>
+    </div>
+
+    <!-- FIKSI -->
+    <div class="middle2">
+      <h2>FIKSI</h2>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/6TEPxVO.jpeg"><div class="judul">Adhesi</div><div class="penulis">Penulis: Vanessa</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/inbSZnh.jpeg"><div class="judul">Hello (Again) Cello</div><div class="penulis">Penulis: Nadia Ristivani</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/YfE0ePN.jpeg"><div class="judul">Hello Cello</div><div class="penulis">Penulis: Nadia Ristivani</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/K8Bs0pZ.jpeg"><div class="judul">Laut Bercerita</div><div class="penulis">Penulis: Leila Chudori</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/nqjVIo0.jpeg"><div class="judul">Malioboro at Midnight</div><div class="penulis">Penulis: Skysphire</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/H5QpHIw.jpeg"><div class="judul">Malioboro Diaries</div><div class="penulis">Penulis: Skysphire</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/2AkBn4j.jpeg"><div class="judul">Poetry in Our Heads</div><div class="penulis">Penulis: Kith</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/CgjQBdx.jpeg"><div class="judul">Sincerpity</div><div class="penulis">Penulis: Maro Fitzye</div></div></div>
+    </div>
+
+    <!-- NON FIKSI -->
+    <div class="middle2">
+      <h2>NON FIKSI</h2>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/jmDmGJ0.jpeg"><div class="judul">Filosofi Teras</div><div class="penulis">Penulis: Henry Manampiring</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/vJqCvPV.jpeg"><div class="judul">Jika kita tak jadi apa-apa</div><div class="penulis">Penulis: Alvi Syahrin</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/uGo1osd.jpeg"><div class="judul">Sebuah Seni Untuk Bersikap Bodo Amat</div><div class="penulis">Penulis: Mark Manson</div></div></div>
+      <div class="buku"><div class="foto"><img src="https://imgur.com/62CVpoZ.jpeg"><div class="judul">The Alpha Girl's Guide</div><div class="penulis">Penulis: Henry Manampiring</div></div></div>
+    </div>
+
+    <div class="footer">
+      <p>Casa De Saber Digital © 2023</p>
+    </div>
+  </div>
+</body>
+</html>
