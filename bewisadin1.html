@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Perpustakaan Digital</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      color: #334EAC;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #BAD6EB;
+    }
+
+    .book {
+      width: 380px;
+      background: linear-gradient(to right, 
+        #D0E3FF 90%, 
+        #D0E3FF 90%, 
+        #F7F2EB 93%, 
+        #F7F2EB 93%, 
+        #FFF9F0 96%, 
+        #FFF9F0 96%);
+      border-radius: 5px 15px 15px 5px;
+      box-shadow: 
+        15px 15px 30px rgba(112, 150, 209, 0.3),
+        5px 5px 10px rgba(112, 150, 209, 0.2);
+      padding: 40px 30px 30px 40px;
+      position: relative;
+    }
+
+    .logo {
+      margin-bottom: 30px;
+      color: #334EAC;
+      font-size: 32px;
+      font-weight: bold;
+      text-shadow: 
+        3px 3px 0 #BAD6EB,
+        5px 5px 5px rgba(112, 150, 209, 0.4),
+        0 0 10px rgba(112, 150, 209, 0.3);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      color: #334EAC;
+      margin-bottom: 30px;
+      font-size: 24px;
+      text-shadow: 
+        2px 2px 0 #BAD6EB,
+        3px 3px 5px rgba(112, 150, 209, 0.3);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .input-group {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #334EAC;
+      font-weight: bold;
+      text-shadow: 
+        1px 1px 1px rgba(112, 150, 209, 0.6),
+        0 0 5px rgba(112, 150, 209, 0.4);
+      letter-spacing: 0.5px;
+    }
+
+    .input-group input {
+      width: 90%;
+      padding: 12px 15px;
+      border: 2px solid #7096D1;
+      border-radius: 8px;
+      background-color: #F7F2EB;
+      font-size: 16px;
+      color: #334EAC;
+      font-family: Georgia, serif;
+      transition: all 0.4s ease;
+      box-shadow:
+        inset 2px 2px 5px rgba(0, 0, 0, 0.05),
+        0 0 0 rgba(112, 150, 209, 0);
+      animation: floatIn 0.6s ease-in-out;
+    }
+
+    .input-group input:hover {
+      box-shadow:
+        0 0 10px rgba(112, 150, 209, 0.3),
+        inset 2px 2px 6px rgba(0, 0, 0, 0.03);
+      transform: scale(1.02);
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: #7096D1;
+      background-color: #ffffff;
+      box-shadow:
+        0 0 10px #7096D1,
+        inset 2px 2px 6px rgba(0, 0, 0, 0.05);
+      animation: pulse 0.4s ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.015); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-button {
+      font-family: Georgia, serif;
+      background: linear-gradient(to bottom, #334EAC, #7096D1);
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      width: 100%;
+      transition: all 0.3s;
+      box-shadow: 
+        0 5px 0 #334EAC,
+        0 8px 15px rgba(51, 78, 172, 0.3),
+        inset 0 1px 1px rgba(255,255,255,0.3);
+      text-shadow: 
+        1px 1px 1px rgba(0, 0, 50, 0.6),
+        0 0 5px rgba(255,255,255,0.2);
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .login-button:hover {
+      background: linear-gradient(to bottom, #7096D1, #334EAC);
+      transform: translateY(2px);
+      box-shadow: 
+        0 3px 0 #334EAC,
+        0 5px 10px rgba(51, 78, 172, 0.3);
+    }
+
+    .login-button:active {
+      transform: translateY(5px);
+      box-shadow: 
+        0 1px 0 #2b3d87,
+        0 2px 5px rgba(51, 78, 172, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="book">
+    <div class="logo">Casa De Saber Digital</div>
+    <h1>Silakan Login</h1>
+    <form action="bewisadin2.html" method="get">
+      <div class="input-group">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" required />
+      </div>
+      <div class="input-group">
+        <label for="nim">NIM</label>
+        <input type="text" id="nim" name="nim" required />
+      </div>
+      <button type="submit" class="login-button">MASUK</button>
+    </form>
+  </div>
+</body>
+</html>

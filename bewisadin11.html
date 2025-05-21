@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulir Turnitin</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      color: #081F5C;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #BAD6EB;
+    }
+
+    #container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(4px);
+    }
+
+    h2 {
+      text-align: center;
+      color: #334EAC;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    input[type="submit"] {
+      background-color: #334EAC;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 25px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #203b91;
+    }
+
+    .syarat {
+      background-color: #EAF1FA;
+      border: 1px solid #BAD6EB;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .syarat strong {
+      color: #081F5C;
+    }
+
+    .syarat ol {
+      padding-left: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <h2>Formulir Pengajuan Turnitin</h2>
+
+  <div class="syarat">
+    <strong>Syarat dan Ketentuan:</strong>
+    <ol>
+      <li>Layanan untuk internal Casa De Saber Digital (Dosen, Mahasiswa dan Staff).</li>
+      <li>Belum pernah diujikan dengan akun Turnitin lain, baik dalam/luar Casa De Saber Digital dan tidak diujikan lagi di luar.</li>
+      <li>File yang diujikan merupakan Karya Ilmiah/Artikel Ilmiah, Skripsi, Thesis atau Disertasi.</li>
+      <li>File yang submit 2 kali atau lebih dalam kurun waktu 1x24 jam akan dianggap sebagai file duplikasi dan tidak akan dilakukan pengujian.</li>
+      <li>File yang diupload adalah file pokok (cover, isi, daftar pustaka/referensi yang dijadikan satu file). Mohon tidak menyertakan halaman pengesahan, daftar isi dan sebagainya.</li>
+      <li>Berilah nama file dengan format: <em>Jenis-Nama-NIM</em>, contoh: <strong>Skripsi-Atika-2601021312001</strong>.</li>
+      <li>File yang diujikan adalah file versi final, maksimal 10 MB dan berformat <code>.docx</code> (Microsoft Word).</li>
+      <li>Artikel Jurnal sebaiknya dihilangkan nama jurnal, afiliasi institusi penulis, edisi jurnal.</li>
+      <li>Daftar pustaka/referensi menggunakan standar penulisan sumber rujukan yang benar.</li>
+      <li>Hasil pengujian bukan tanggung jawab admin dan akan dikirimkan melalui e-mail maksimal dalam waktu 3 hari kerja (Senin - Jumat, 07.30-16.00 WIB).</li>
+      <li>Mohon tuliskan alamat email dengan benar.</li>
+      <li>Menjunjung tinggi kejujuran. Bagi yang mencoba berlaku tidak jujur, maka kami tidak akan melakukan pengujian.</li>
+    </ol>
+  </div>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    <label for="nama">Nama Lengkap</label>
+    <input type="text" id="nama" name="nama" required>
+
+    <label for="nim">NIM/NIP</label>
+    <input type="text" id="nim" name="nim" required>
+
+    <label for="email">Alamat Email Casa De Saber Digital</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="kategori">Kategori Dokumen</label>
+    <select id="kategori" name="kategori" required>
+      <option value="">-- Pilih --</option>
+      <option value="Skripsi">Skripsi</option>
+      <option value="Thesis">Thesis</option>
+      <option value="Disertasi">Disertasi</option>
+      <option value="Artikel">Artikel Ilmiah</option>
+      <option value="Lainnya">Lainnya</option>
+    </select>
+
+    <label for="file">Upload File (.docx, maks 10MB)</label>
+    <input type="file" id="file" name="file" accept=".docx" required>
+
+    <label for="catatan">Catatan Tambahan (opsional)</label>
+    <textarea id="catatan" name="catatan" rows="4"></textarea>
+
+    <input type="submit" value="Kirim Pengajuan">
+  </form>
+
+  <div class="footer">
+    Casa De Saber Digital © 2025
+  </div>
+</div>
+
+</body>
+</html>

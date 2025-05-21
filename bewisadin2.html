@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casa De Saber Digital</title>
+  <style>
+  body {
+    font-family: 'Georgia', serif;
+    color: #081F5C;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F6FF; /* lebih soft dari BAD6EB */
+  }
+
+  #container {
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 1px solid #BAD6EB;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .header {
+    background: #7096D1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 5px dotted #BAD6EB;
+  }
+
+  .header img {
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .header h1 {
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .search-box {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-box input[type="text"] {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #7096D1;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+    background-color: white;
+  }
+
+  .search-box button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #334EAC;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+
+  .search-box button:hover {
+    background-color: #081F5C;
+  }
+
+  .search-box button:active {
+    transform: scale(0.97);
+  }
+
+  .main {
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  .left, .right {
+    width: 25%;
+    padding: 20px;
+    background-color: #E4EFFA; /* ganti dari BAD6EB biar lembut dan serasi */
+  }
+
+  .middle {
+    width: 50%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 2px dashed #7096D1;
+    border-right: 2px dashed #7096D1;
+    overflow-y: auto;
+    max-height: 600px;
+  }
+
+  h3 {
+    color: #334EAC;
+    border-bottom: 2px dotted #7096D1;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #081F5C;
+    background: #DCEBFA; /* lebih kalem dari D0E3FF */
+    padding: 8px 15px 8px 35px;
+    border-radius: 20px;
+    display: block;
+    font-size: 0.9rem;
+    position: relative;
+  }
+
+  a:hover {
+    background: linear-gradient(to right, #334EAC, #081F5C);
+    color: white;
+  }
+
+  .middle h2 {
+    color: #334EAC;
+    text-align: center;
+  }
+
+  .middle img {
+    border-radius: 10px;
+    border: 5px solid #7096D1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+  }
+
+  .middle img:hover {
+    transform: scale(1.05);
+  }
+
+  .news-item, .contact-box {
+    background: #FFFFF0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #334EAC;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .news-item a {
+    color: #081F5C;
+    font-weight: bold;
+  }
+
+  .news-item a:hover {
+    color: #334EAC;
+    text-decoration: underline;
+  }
+
+  .footer {
+    background: linear-gradient(to right, #7096D1, #BAD6EB);
+    padding: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ffffff;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .main {
+      flex-direction: column;
+    }
+
+    .left, .middle, .right {
+      width: 100%;
+      border: none;
+    }
+
+    .middle {
+      max-height: unset;
+      overflow: visible;
+    }
+  }
+</style>
+  <script>
+    function searchBook() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const books = document.querySelectorAll(".book-item");
+
+      books.forEach(book => {
+        book.classList.remove("highlight");
+        const title = book.textContent.toLowerCase();
+        if (title.includes(query)) {
+          book.classList.add("highlight");
+          book.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="header">
+      <img src="https://imgur.com/yfhcDpz.jpg" width="100" height="100" alt="Library Mascot" />
+      <h1>Casa De Saber Digital</h1>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cari buku, atau topik.." />
+      <button onclick="searchBook()">Cari</button>
+    </div>
+
+    <div class="main">
+      <div class="left">
+        <h3>MENU</h3>
+        <ul>
+          <li><a href="bewisadin5.html">Profile</a></li>
+          <li><a href="bewisadin8.html">Layanan</a></li>
+          <li><a href="bewisadin6.html">Panduan & FAQ</a></li>
+          <li><a href="bewisadin7.html">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="middle">
+        <h3>BUKU TERPOPULER</h3>
+        <div class="book-item" id="bulan">
+          <h2>BULAN - TERE LIYE</h2>
+          <img src="https://i.imgur.com/CZNf4EH.jpg" width="240" alt="Buku Bulan" />
+        </div>
+
+        <div class="news">
+          <h3>BERITA TERBARU</h3>
+          <div class="news-item">
+            <a href="https://www.liputan6.com/citizen6/read/6025779/momen-hari-buku-nasional-pnm-wujudkan-akses-literasi-hingga-akar-rumput" target="_blank">- PNM & Literasi</a>
+            PNM memperkenalkan “Tiba di PNM” untuk akses literasi di akar rumput.
+          </div>
+          <div class="news-item">
+            <a href="bewisadin10.html" target="_blank">- Hari Buku Nasional</a>
+            Kegiatan seru untuk tingkatkan minat baca dan sastra Indonesia.
+          </div>
+        </div>
+
+        <div class="banner">
+          <h3>KEGIATAN PERPUSTAKAAN</h3>
+          <img src="https://imgur.com/V0H1DD8.jpg" alt="Banner Kegiatan" width="100%" />
+        </div>
+      </div>
+
+      <div class="right">
+        <h3>KOLEKSI</h3>
+        <ul>
+          <li><a href="bewisadin3.html">Buku & e-Book pilihan</a></li>
+          <li><a href="bewisadin4.html">Jurnal yang dilanggan</a></li>
+          <li><a href="bewisadin9.html">Agenda Perpustakaan</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Casa De Saber Digital ©️ 2025</p>
+    </div>
+  </div>
+</body>
+</html>

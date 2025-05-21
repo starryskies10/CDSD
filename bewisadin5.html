@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4 Profile Perpustakaan Online</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      color: #081F5C;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #BAD6EB;
+    }
+
+    #container {
+      max-width: 1200px;
+      margin: 20px auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 1px solid #334EAC;
+    }
+
+    .header {
+      background: linear-gradient(to right, #7096D1, #BAD6EB);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 5px dotted #334EAC;
+    }
+
+    .header img {
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #BAD6EB;
+    }
+
+    .header h1 {
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .menu {
+      background-color: #7096D1;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 12px 30px;
+      margin: 0 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: transform 0.2s ease, background-color 0.3s;
+      background-color: #334EAC;
+      display: inline-block;
+    }
+
+    .menu a:hover {
+      background-color: #081F5C;
+      transform: scale(1.05);
+    }
+
+    .main {
+      display: flex;
+    }
+
+    .left, .right {
+      width: 5%;
+      min-width: 20px;
+    }
+
+    .middle {
+      flex: 1;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.95);
+    }
+
+    .section {
+      border: 2px dashed #7096D1;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      background-color: #EBF2FB;
+    }
+
+    .section h2 {
+      color: #334EAC;
+      margin-top: 0;
+    }
+
+    .profiles-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .profile-card {
+      background: rgba(112, 150, 209, 0.1);
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      min-height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      border: 1px solid #334EAC;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .profile-picture {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid #7096D1;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .profile-name {
+      font-size: 1.2rem;
+      color: #334EAC;
+      margin: 10px 0;
+    }
+
+    .profile-details {
+      text-align: left;
+      padding: 0 5px;
+      flex-grow: 1;
+    }
+
+    .profile-detail {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding: 8px 0;
+      border-bottom: 1px dashed #7096D1;
+    }
+
+    .detail-label {
+      font-weight: bold;
+      color: #334EAC;
+      width: 60px;
+      font-size: 0.9rem;
+    }
+
+    .detail-value {
+      color: #081F5C;
+      flex-grow: 1;
+      text-align: right;
+      font-size: 0.9rem;
+      word-break: break-word;
+    }
+
+    .struktur-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 3px solid #334EAC;
+    }
+
+    .footer {
+      background: linear-gradient(to right, #7096D1, #BAD6EB);
+      padding: 15px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #ffffff;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 1024px) {
+      .profiles-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .profiles-container {
+        grid-template-columns: 1fr;
+      }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-detail {
+        flex-direction: column;
+      }
+
+      .detail-value {
+        text-align: left;
+        width: 100%;
+        margin-top: 5px;
+      }
+
+      .left, .right {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div class="header">
+    <img src="https://imgur.com/yfhcDpz.jpg" width="100" height="100" alt="Library Logo">
+    <h1>Casa De Saber Digital</h1>
+  </div>
+
+  <div class="menu">
+   <a href="bewisadin2.html">Home</a>
+    <a href="bewisadin8.html">Layanan</a>
+    <a href="bewisadin6.html">Panduan & FAQ</a>
+    <a href="bewisadin7.html">Kontak</a>
+  </div>
+
+  <div class="main">
+    <div class="left"></div>
+    <div class="middle">
+      <!-- Tentang Kami -->
+      <div class="section">
+        <h2>Tentang Kami</h2>
+        <p>Casa De Saber Digital (cdsd)
+Nama Casa De Saber Digital diambil dari bahasa Spanyol yang berarti “Rumah Pengetahuan Digital”. Kata “Casa” menggambarkan tempat yang nyaman dan aman, seperti rumah, tempat seseorang bisa belajar dan berkembang. Sementara itu, “De Saber” menekankan bahwa inti utama dari platform ini adalah pengetahuan, dan “Digital” menunjukkan pendekatan berbasis teknologi yang mendukung akses informasi secara lebih fleksibel. Secara keseluruhan, nama ini mencerminkan semangat untuk menciptakan ruang literasi digital yang terbuka dan mudah dijangkau oleh siapa saja.
+Casa De Saber Digital hadir sebagai bentuk adaptasi perpustakaan terhadap perkembangan zaman. Bukan hanya menyediakan koleksi digital, platform ini juga berfungsi sebagai ruang interaktif untuk belajar, berbagi, dan tumbuh bersama. Dengan memadukan nilai-nilai klasik dunia literasi dan pendekatan teknologi masa kini, perpustakaan ini berupaya menjadi tempat yang inklusif, nyaman, dan relevan bagi kebutuhan masyarakat digital. Filosofi utamanya adalah menghadirkan pengetahuan dalam format yang lebih dekat dengan kehidupan sehari-hari, mudah diakses, fleksibel, dan tetap bernilai.</p>
+      </div>
+
+      <!-- ...Bagian sebelum ini tetap sama seperti sebelumnya... -->
+
+      <!-- Visi dan Misi -->
+      <div class="section">
+        <h2>Visi & Misi</h2>
+        <p><strong>Visi:</strong>
+        <ul>
+          Menjadi ruang literasi digital yang inklusif, nyaman, dan inovatif sebagai rumah pengetahuan bagi semua kalangan dalam menjelajahi dan mengembangkan potensi melalui teknologi informasi.</p>
+        <p><strong>Misi:</strong></p>
+        <ul>
+          <li>Menyediakan akses yang mudah, fleksibel, dan ramah pengguna terhadap sumber pengetahuan digital.</li>
+          <li>Mendorong budaya belajar mandiri dan kolaboratif melalui platform perpustakaan digital yang interaktif.</li>
+          <li>Mengintegrasikan nilai-nilai literasi klasik dengan pendekatan teknologi modern untuk menciptakan pengalaman belajar yang relevan dengan kebutuhan zaman.</li>
+          <li>Membangun komunitas digital yang terbuka, aman, dan mendukung pertumbuhan intelektual penggunanya.</li>
+          <li>Mengembangkan layanan perpustakaan digital yang responsive terhadap perubahan dan inovasi di bidang informasi dan teknologi.</li>
+        </ul>
+      </div>
+
+      <!-- Filosofi Logo dan Warna -->
+      <div class="section">
+        <h2>Filosofi Logo & Warna</h2>
+        <p><strong>Filosofi Logo:</strong> Logo ini merepresentasikan filosofi mendalam tentang pembinaan, pendidikan, dan kepedulian sosial. Bentuk visual yang membentuk simbol menyerupai hati mencerminkan bahwa setiap langkah dan proses yang dijalankan dilandasi oleh cinta, empati, dan dedikasi. Elemen-elemen geometris yang terstruktur menciptakan kesan keteraturan, kebijaksanaan, dan arah yang jelas—menggambarkan visi lembaga atau komunitas dalam memberikan kontribusi nyata bagi kemajuan bersama. Warna biru pada logo memperkuat pesan kepercayaan, stabilitas, dan profesionalisme, serta memberikan kesan lingkungan yang tenang dan kondusif. Secara keseluruhan, logo ini bukan hanya sekadar identitas visual, melainkan juga simbol nilai-nilai luhur yang menekankan keseimbangan antara kecerdasan, tanggung jawab sosial, dan integritas dalam membangun manusia yang berdaya.</p>
+
+        <p><strong>Filosofi Warna:</strong> Perpustakaan dengan palet warna biru kosmik ini mencerminkan filosofi sebagai ruang pengetahuan yang luas, tenang, dan penuh imajinasi. Nuansa biru yang bervariasi—dari yang gelap dan dalam hingga yang lembut dan terang—memberikan kesan elegan, menenangkan, sekaligus menggugah rasa ingin tahu. Warna-warna ini menghidupkan suasana yang mendukung konsentrasi dan eksplorasi, menjadikan perpustakaan bukan sekadar tempat membaca, tetapi semesta tempat pikiran menjelajah, terhubung, dan berkembang tanpa batas.</p>
+      </div>
+
+      <!-- Harapan -->
+      <div class="section">
+        <h2>Harapan</h2>
+        <p>Kami berharap Casa De Saber Digital dapat menjadi pusat literasi digital yang tidak hanya menyediakan akses informasi, tetapi juga menjadi ruang yang menginspirasi dan memotivasi penggunanya untuk terus belajar dan berkembang. Melalui kombinasi teknologi, nilai-nilai kemanusiaan, dan semangat kolaboratif, platform ini diharapkan mampu menjangkau berbagai lapisan masyarakat dan menciptakan dampak positif yang berkelanjutan dalam dunia pendidikan dan literasi.</p>
+      </div>
+	  
+      <!-- Struktur Organisasi -->
+      <div class="section">
+        <h2>Struktur Organisasi</h2>
+        <img src="https://i.imgur.com/quHUDBN.jpeg" alt="Struktur Organisasi" class="struktur-img">
+      </div>
+
+      <!-- Profile Anggota -->
+      <div class="section">
+        <h2>Profil Anggota</h2>
+        <div class="profiles-container">
+          <div class="profile-card">
+            <img src="https://imgur.com/rjb11ZE.jpg" alt="Profile 1" class="profile-picture">
+            <h2 class="profile-name">Nabella Khanza</h2>
+            <div class="profile-details">
+              <div class="profile-detail">
+                <span class="detail-label">NIM:</span>
+                <span class="detail-value">13040124140137</span>
+              </div>
+              <div class="profile-detail">
+                <span class="detail-label">Prodi:</span>
+                <span class="detail-value">Ilmu Perpustakaan dan Informasi</span>
+              </div>
+              <div class="profile-detail">
+                <span class="detail-label">Angkatan:</span>
+                <span class="detail-value">2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <img src="https://imgur.com/Rkw7wel.jpg" alt="Profile 2" class="profile-picture">
+            <h2 class="profile-name">Wilda Husna Maulida</h2>
+            <div class="profile-details">
+              <div class="profile-detail">
+                <span class="detail-label">NIM:</span>
+                <span class="detail-value">13040124140138</span>
+              </div>
+              <div class="profile-detail">
+                <span class="detail-label">Prodi:</span>
+                <span class="detail-value">Ilmu Perpustakaan dan Informasi</span>
+              </div>
+              <div class="profile-detail">
+                <span class="detail-label">Angkatan:</span>
+                <span class="detail-value">2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <img src="https://imgur.com/mfCuZ5K.jpg" alt="Profile 3" class="profile-picture">
+            <h2 class="profile-name">Elsa Nugroho</h2>
+            <div class="profile-details">
+              <div class="profile-detail">
+                <span class="detail-label">NIM:</span>
+                <span class="detail-value">13040124140156</span>
+              </div>
+              <div class="profile-detail">
+                <span class="detail-label">Prodi:</span>
+                <span class="detail-value">Ilmu Perpustakaan dan Informasi</span>
+              </div>
+              <div class="profile-detail">
+                <span class="detail-label">Angkatan:</span>
+                <span class="detail-value">2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-card">
+            <img src="https://imgur.com/6xPCBUe.jpg" alt="Profile 4" class="profile-picture">
+            <h2 class="profile-name">Dyna Hawa Oktavia</h2>
+            <div class="profile-details">
+              <div class="profile-detail">
+                <span class="detail-label">NIM:</span>
+                <span class="detail-value">13040124140166</span>
+              </div>
+              <div class="profile-detail">
+                <span class="detail-label">Prodi:</span>
+                <span class="detail-value">Ilmu Perpustakaan dan Informasi</span>
+              </div>
+              <div class="profile-detail">
+                <span class="detail-label">Angkatan:</span>
+                <span class="detail-value">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="right"></div>
+  </div>
+
+  <div class="footer">
+    <p>Casa De Saber Digital © 2025</p>
+  </div>
+</div>
+</body>
+</html>
+
+
